@@ -1,0 +1,122 @@
+/* start variable */
+:root {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
+}
+/* end variable */
+/* start global rules  */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+/* لون محيط الاسكرول */
+::-webkit-scrollbar-track {
+  background-color: #dddddd99;
+  box-shadow: 0 0 5px #767373c3 inset;
+}
+/* لون شريط الاسكرول */
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--blue-alt-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #333;
+  color: white;
+  font-family: "Roboto", serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* start responsive  */
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end responsive */
+.card{
+  background-color: white;
+  color: black;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 350px;
+  overflow: hidden;
+}
+.card .number span{
+  height: 60px;
+  width: 60px;
+  margin: 0 auto 20px;
+  background-color: #009688;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  transition: .9s;
+}
+.card h1{
+margin-bottom: 20px;
+}
+.card h1,
+.card p{
+  color: #009688;
+  transition: .9s;
+}
+.card:hover span{
+  box-shadow: 0 0 0 500px #009688;
+}
+.card:hover h1,
+.card:hover p{
+  color: white;
+}

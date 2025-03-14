@@ -1,0 +1,165 @@
+/* start variable */
+:root {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
+}
+
+/* end variable */
+/* start global rules  */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* لون محيط الاسكرول */
+::-webkit-scrollbar-track {
+  background-color: #dddddd99;
+  box-shadow: 0 0 5px #767373c3 inset;
+}
+
+/* لون شريط الاسكرول */
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--blue-alt-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Roboto", serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* start responsive  */
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* end responsive */
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f6f6f6;
+  padding: 20px;
+  color: black;
+}
+
+form h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+form > div {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+form > div input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+form > div label {
+  position: relative;
+  padding-left: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+form > div label::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 50%;
+  left: 0;
+  margin-top: -7px;
+  border: 1.2px solid black;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+label::after {
+  font-family: var(--fa-style-family-classic);
+  content: "\f00c";
+  position: absolute;
+  font-weight: 900;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: -7px;
+  background-color: var(--blue-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  font-size: 13px;
+  transform: scale(0) rotate(360deg);
+  transition: 0.4s;
+}
+
+form > div input:checked + label::after {
+  transform: scale(1);
+}
+form > div input:checked + label{
+  color: #0075ff;
+}
