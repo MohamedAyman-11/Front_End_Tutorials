@@ -1,0 +1,152 @@
+/* start variable */
+:root {
+  --Green: hsl(75, 94%, 57%);
+  --White: hsl(0, 0%, 100%);
+  --Grey-700: hsl(0, 0%, 20%);
+  --Grey-800: hsl(0, 0%, 12%);
+  --Grey-900: hsl(0, 0%, 8%);
+  --Font-size-paragraph: 14px;
+}
+/* end variable */
+/* start global rules  */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 21px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #dddddd99;
+  box-shadow: 0 0 5px #767373c3 inset;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--Green);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(75, 76%, 40%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", serif;
+  background-color: var(--Grey-900);
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end global rules  */
+.content .container .card {
+  background-color: var(--Grey-800);
+  box-shadow: 0 0 10px var(--Grey-700);
+}
+.content .container .card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 30px;
+}
+.content .container .card img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+.logo {
+  position: relative;
+}
+.content .container .card .logo::before {
+  content: "";
+  top: 0;
+  left: calc(50% - 1px);
+  width: 100px;
+  height: 100px;
+  background-color: hsl(0deg 0% 20% / 30%);
+  position: absolute;
+  z-index: 999;
+  transform: translatex(-50%);
+  border-radius: 50%;
+}
+.content .container .card .text h2 {
+  color: white;
+  margin-bottom: 15px;
+}
+.content .container .card .text h3 {
+  color: var(--Green);
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+.content .container .card .text p {
+  color: white;
+  font-size: var(--Font-size-paragraph);
+  margin-bottom: 25px;
+}
+.links .rows a {
+  text-align: center;
+  letter-spacing: 1.1px;
+  padding: 10px;
+  transition: all 0.5s;
+  background-color: var(--Grey-700);
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  display: block;
+  border-radius: 6px;
+}
+.links .rows a:not(:first-child) {
+  margin-top: 15px;
+}
+.links .rows a:hover {
+  background-color: var(--Green);
+  color: var(--Grey-900);
+}
+@media (min-width: 768px) {
+  .content .container .card {
+    width: 350px;
+  }
+}
+@media (max-width: 767px) {
+  .content .container .card {
+    width: 310px;
+  }
+}
