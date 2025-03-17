@@ -139,6 +139,7 @@ a {
 .links .rows a:hover {
   background-color: var(--Green);
   color: var(--Grey-900);
+  box-shadow: 0 2px 7px -1px var(--Green);
 }
 @media (min-width: 768px) {
   .content .container .card {
